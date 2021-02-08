@@ -1,0 +1,13 @@
+.feature-photo-row {
+  display: flex;
+}
+
+.feature-photo-landscape {
+  width: 20.45%;
+  height: auto;
+}
+
+.feature-photo-portrait {
+  width: 9.1%;
+  height: auto;
+}

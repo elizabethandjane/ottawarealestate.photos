@@ -1,0 +1,14 @@
+<section>
+  <header class="gallery-top island">
+    <h1 class="kilo push-0">
+      <span class="milli italic font-secondary color-primary line-after dec-before">Photos of</span>
+      <br><span class="giga upper color-neutral-white">{{page.title}}</span>
+    </h1>
+    <a class="btn btn-fancy" href="#"><span>View Photo Gallery</span></a>
+  </header>
+  <div class="gallery">
+    {% auto_gallery site.cdn page.category page.slug "front" page.front_images %}
+    {% auto_gallery site.cdn page.category page.slug "interior" page.interior_images %}
+    {% auto_gallery site.cdn page.category page.slug "back" page.back_images %}
+  </div>
+</section>

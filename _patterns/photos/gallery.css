@@ -1,0 +1,71 @@
+.gallery-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.gallery-row {
+  display: flex;
+}
+
+.gallery-row img {
+  display: block;
+  width: 100%;
+}
+
+.gallery-row > div {
+  cursor: zoom-in;
+  position: relative;
+}
+
+.gallery-row-2 > div {
+  width: 50%;
+}
+
+.gallery-row-3 > div {
+  width: 33.3333%;
+}
+
+.gallery-row-4 > div {
+  width: 25%;
+}
+
+.gallery-row:nth-child(2) > div:nth-child(2)::before,
+.gallery-row:nth-child(7) > div:nth-child(2)::before {
+  content: "";
+  position: absolute;
+  left: var(--space-1-4);
+  right: var(--space-1-4);
+  top: var(--space-1-4);
+  bottom: var(--space-1-4);
+  border: 0.1rem solid var(--color-primary);
+  z-index: 1;
+}
+
+.gallery-row:nth-child(4) > div:last-child::before,
+.gallery-row:nth-child(11) > div:nth-last-child(2)::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  border: var(--space-1-4) solid rgba(var(--rgb-neutral-dark), 0.8);
+  z-index: 1;
+}
+
+.gallery-row:nth-child(5) > div:first-child::before,
+.gallery-row:nth-child(9) > div:nth-child(2)::before {
+  content: "";
+  position: absolute;
+  left: var(--space-1-8);
+  right: var(--space-1-8);
+  top: var(--space-1-8);
+  bottom: var(--space-1-8);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 256 256' width='256' height='256'%3E%3Cpath fill='none' stroke='%23e6c270' stroke-width='2' d='M82 6H24v18'/%3E%3Cpath fill='none' stroke='%23e6c270' stroke-width='2' d='M56 14H32v18M6 62V24h18'/%3E%3Cpath fill='none' stroke='%23e6c270' stroke-width='2' d='M14 46V32h18'/%3E%3C/svg%3E"),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 256 256' width='256' height='256'%3E%3Cpath fill='none' d='M0 0h256v256H0z'/%3E%3Cpath fill='none' stroke='%23e6c270' stroke-width='2' d='M174 250h58v-18'/%3E%3Cpath fill='none' stroke='%23e6c270' stroke-width='2' d='M200 242h24v-18m26-30v38h-18'/%3E%3Cpath fill='none' stroke='%23e6c270' stroke-width='2' d='M242 210v14h-18'/%3E%3C/svg%3E");
+  background-position: left top, right bottom;
+  background-repeat: no-repeat;
+  background-size: 7em auto;
+  z-index: 1;
+}
