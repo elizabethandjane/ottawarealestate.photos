@@ -65,3 +65,29 @@
   content: none;
   display: none;
 }
+
+.btn-realtor {
+  background-color: var(--color-neutral-light);
+  padding-left: var(--space-1-4);
+  padding-right: var(--space-1-2);
+  border: 0.1rem solid var(--color-primary);
+  border-top: 0;
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+}
+
+.btn-realtor:hover,
+.btn-realtor:focus,
+.btn-realtor:active {
+  background-color: var(--color-neutral);
+  border: 0.1rem solid var(--color-primary);
+  border-top: 0;
+}
+
+.btn-realtor > span::before,
+.btn-realtor > span::after {
+  content: none;
+  display: none;
+}
