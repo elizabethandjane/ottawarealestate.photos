@@ -1,0 +1,28 @@
+permalink: /:categories/:slug/
+
+theme: jekyll_patternbot
+plugins:
+  - jekyll-archives
+
+cdn: https://assets.ottawarealestate.photos
+# cdn: /photos
+
+patternbot:
+  title: "Ottawa Real Estate Photos"
+  font_url: "https://fonts.googleapis.com/css2?family=Cinzel+Decorative&family=PT+Sans:ital,wght@0,400;0,700;1,400&family=PT+Serif:ital@0;1&display=fallback"
+  colors:
+    background: "--color-neutral-dark"
+
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: property
+
+jekyll-archives:
+  enabled:
+    - categories
+  layout: realtor
+  permalinks:
+    category: "/:name/index.html"

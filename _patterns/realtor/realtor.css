@@ -1,0 +1,128 @@
+.realtor a:not(.btn) {
+  color: var(--color-neutral-medium);
+  padding: 0.1em;
+}
+
+.realtor a:not(.btn):hover,
+.realtor a:not(.btn):focus,
+.realtor a:not(.btn):active {
+  background-color: var(--color-primary-dark);
+  color: var(--color-neutral-white);
+}
+
+.btn-realtor-wrap {
+  position: absolute;
+  right: 0;
+  top: calc(100% + var(--space-1-2));
+  z-index: 1000;
+  padding: 0 var(--space-1-4) var(--space-1-4) var(--space-1-4);
+}
+
+.btn-realtor-wrap::after {
+  content: "";
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: calc(var(--space-1-4) + 0.1rem);
+  background-color: rgba(var(--rgb-neutral-dark), 0.8);
+  position: absolute;
+  z-index: 1;
+}
+
+.btn-realtor {
+  background-color: var(--color-neutral-light);
+  padding-left: var(--space-1-4);
+  padding-right: var(--space-1-2);
+  border: 0.1rem solid var(--color-primary);
+  border-top: 0;
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+}
+
+.btn-realtor:hover,
+.btn-realtor:focus,
+.btn-realtor:active {
+  background-color: var(--color-neutral);
+  border: 0.1rem solid var(--color-primary);
+  border-top: 0;
+}
+
+.btn-realtor > span::before,
+.btn-realtor > span::after {
+  content: none;
+  display: none;
+}
+
+.realtor-top {
+  display: grid;
+  grid-template-areas: "logo broker space portrait details contact";
+  grid-template-columns: 4.4rem 4.4rem 2rem 3rem auto auto;
+  align-items: center;
+  gap: var(--space-1-4);
+}
+
+.realtor-bottom {
+  display: grid;
+  grid-template-areas:
+    "logo   space portrait details call"
+    "broker space portrait details email";
+  grid-template-columns: 4.4rem 2rem 7rem auto 12rem;
+  grid-template-rows: 4.4rem 4.4rem;
+  gap: var(--space-1-4);
+}
+
+.realtor img {
+  display: block;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: center center;
+  border: 0.1rem solid var(--color-neutral-medium);
+}
+
+.portrait {
+  grid-area: portrait;
+}
+
+.logo {
+  grid-area: logo;
+}
+
+.broker {
+  grid-area: broker;
+}
+
+.realtor-details {
+  grid-area: details;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.realtor-contact {
+  grid-area: contact;
+}
+
+.realtor-call {
+  grid-area: call;
+  display: grid;
+  justify-content: stretch;
+  align-items: flex-end;
+  text-align: center;
+}
+
+.realtor-email {
+  grid-area: email;
+  display: grid;
+  justify-content: stretch;
+  align-items: flex-start;
+  text-align: center;
+}
+
+.realtor-contact-group {
+  display: grid;
+  grid-template-columns: 4em auto;
+  align-items: baseline;
+}

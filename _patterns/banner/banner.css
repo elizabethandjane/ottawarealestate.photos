@@ -1,0 +1,14 @@
+.banner {
+  border-top: 0.1rem solid var(--color-primary);
+}
+
+.banner-text {
+  position: absolute;
+  padding-left: calc(var(--space-2) * 2);
+  left: 0;
+  bottom: var(--space-2);
+  border: 0.1rem solid var(--color-primary);
+  border-left: 0;
+  background-color: rgba(var(--rgb-neutral-dark), 0.97);
+  outline: var(--space-1-4) solid rgba(var(--rgb-neutral-dark), 0.8);
+}

@@ -1,0 +1,67 @@
+.btn {
+  position: relative;
+  padding: var(--space-1-8);
+  border-radius: 0;
+  background-color: var(--color-primary);
+  border: 0.2rem solid var(--color-primary-dark);
+  color: var(--color-neutral-black);
+  transition: all 0.2s ease;
+}
+
+.btn:hover {
+  background-color: var(--color-neutral-black);
+  color: var(--color-neutral-white);
+}
+
+.btn > span::before,
+.btn > span::after {
+  content: "";
+  position: absolute;
+  left: var(--space-1-8);
+  top: var(--space-1-8);
+  height: 1em;
+  width: 1em;
+  border-left: 0.1rem solid var(--color-primary-dark);
+  border-top: 0.1rem solid var(--color-primary-dark);
+}
+
+.btn > span::after {
+  left: auto;
+  top: auto;
+  bottom: var(--space-1-8);
+  right: var(--space-1-8);
+  border: 0;
+  border-right: 0.1rem solid var(--color-primary-dark);
+  border-bottom: 0.1rem solid var(--color-primary-dark);
+}
+
+.btn-fancy {
+  padding: var(--space-1-8);
+  border-radius: 0;
+  border-color: var(--color-neutral-dark);
+  background-color: var(--color-primary-dark);
+  color: var(--color-neutral-white);
+}
+
+.btn-fancy > span {
+  display: block;
+  padding: var(--space-1-8) var(--space) calc(var(--space-1-8) * 1.2);
+  background-color: var(--color-neutral-medium);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 256 256' width='256' height='256'%3E%3Cpath fill='none' stroke='%23e6c270' stroke-width='2' d='M82 6H24v18'/%3E%3Cpath fill='none' stroke='%23e6c270' stroke-width='2' d='M56 14H32v18M6 62V24h18'/%3E%3Cpath fill='none' stroke='%23e6c270' stroke-width='2' d='M14 46V32h18'/%3E%3C/svg%3E"),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 256 256' width='256' height='256'%3E%3Cpath fill='none' d='M0 0h256v256H0z'/%3E%3Cpath fill='none' stroke='%23e6c270' stroke-width='2' d='M174 250h58v-18'/%3E%3Cpath fill='none' stroke='%23e6c270' stroke-width='2' d='M200 242h24v-18m26-30v38h-18'/%3E%3Cpath fill='none' stroke='%23e6c270' stroke-width='2' d='M242 210v14h-18'/%3E%3C/svg%3E");
+  background-position: left top, right bottom;
+  background-repeat: no-repeat;
+  background-size: 7em auto;
+  border: 0.1rem solid var(--color-primary);
+  transition: all 0.2s ease;
+}
+
+.btn-fancy:hover > span {
+  background-color: var(--color-primary-dark);
+}
+
+.btn-fancy > span::before,
+.btn-fancy > span::after {
+  content: none;
+  display: none;
+}

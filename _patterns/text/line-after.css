@@ -1,0 +1,24 @@
+.line-after {
+  position: relative;
+}
+
+.line-after::after {
+  content: "";
+  position: absolute;
+  top: 55%;
+  left: calc(100% + var(--space-1-4));
+  width: 2rem;
+  border-bottom: 0.08rem solid currentColor;
+}
+
+.dec-before::before {
+  content: "";
+  position: absolute;
+  top: calc(50% - var(--space-1-4));
+  left: calc(var(--space-1-2) * -1);
+  height: var(--space-1-2);
+  width: var(--space-1-2);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill-rule='evenodd' stroke-linejoin='round' stroke-miterlimit='2' clip-rule='evenodd' viewBox='0 0 256 256' width='256' height='256'%3E%3Cpath fill='%23e6c270' d='M186.092 68.092a7.5 7.5 0 0 0 0-10.607L133.303 4.697a7.5 7.5 0 0 0-10.606 0L69.908 57.485a7.5 7.5 0 0 0 0 10.607l52.789 52.788a7.5 7.5 0 0 0 10.606 0l52.789-52.788zM85.818 62.788L128 104.97l42.182-42.182L128 20.607 85.818 62.788z'/%3E%3Cpath fill='%23e6c270' d='M197.462 133.303a7.5 7.5 0 0 0 0-10.606l-64.159-64.159a7.5 7.5 0 0 0-10.606 0l-64.159 64.159a7.5 7.5 0 0 0 0 10.606l64.159 64.159a7.5 7.5 0 0 0 10.606 0l64.159-64.159zM74.448 128L128 181.552 181.552 128 128 74.448 74.448 128z'/%3E%3Cpath fill='%23e6c270' d='M186.092 198.515a7.5 7.5 0 0 0 0-10.607l-52.789-52.788a7.5 7.5 0 0 0-10.606 0l-52.789 52.788a7.5 7.5 0 0 0 0 10.607l52.789 52.788a7.5 7.5 0 0 0 10.606 0l52.789-52.788zm-100.274-5.303L128 235.393l42.182-42.181L128 151.03l-42.182 42.182z'/%3E%3C/svg%3E");
+  background-size: contain;
+  background-position: right center;
+}

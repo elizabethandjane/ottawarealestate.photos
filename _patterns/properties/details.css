@@ -1,0 +1,15 @@
+.property-details > ul {
+  display: flex;
+  justify-content: center;
+}
+
+.property-details li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.icon-property {
+  height: calc(var(--space) * 2.5);
+  width: calc(var(--space) * 2.5);
+}

@@ -1,0 +1,20 @@
+.fade-lines {
+  position: relative;
+}
+
+.fade-lines::before,
+.fade-lines::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: var(--space-1-4);
+  background-color: rgba(var(--rgb-neutral-dark), 0.8);
+  z-index: 1;
+}
+
+.fade-lines::after {
+  top: auto;
+  bottom: 0;
+}
