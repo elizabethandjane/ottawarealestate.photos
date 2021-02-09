@@ -1,13 +1,16 @@
 .feature-photo-row {
-  display: flex;
+  display: grid;
+  grid-template-columns: 3fr 3fr 0 0 0 0;
 }
 
-.feature-photo-landscape {
-  width: 20.45%;
-  height: auto;
+@media only screen and (min-width: 38em) {
+  .feature-photo-row {
+    grid-template-columns: 3fr 3fr 1.3333fr 3fr 0 0;
+  }
 }
 
-.feature-photo-portrait {
-  width: 9.1%;
-  height: auto;
+@media only screen and (min-width: 60em) {
+  .feature-photo-row {
+    grid-template-columns: 3fr 3fr 1.3333fr 3fr 1.3333fr 3fr;
+  }
 }
