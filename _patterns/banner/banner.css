@@ -1,14 +1,42 @@
 .banner {
+  position: relative;
   border-top: 0.1rem solid var(--color-primary);
 }
 
+.banner-text-wrap {
+  position: relative;
+  margin: calc(var(--space) * -1) auto 0;
+  z-index: 2;
+  max-width: 30em;
+  padding: 0 var(--space-1-2);
+}
+
 .banner-text {
-  position: absolute;
-  padding-left: calc(var(--space-2) * 2);
-  left: 0;
-  bottom: var(--space-2);
   border: 0.1rem solid var(--color-primary);
-  border-left: 0;
   background-color: rgba(var(--rgb-neutral-dark), 0.97);
   outline: var(--space-1-4) solid rgba(var(--rgb-neutral-dark), 0.8);
+  padding: var(--space-1-2);
+}
+
+.banner-title {
+  font-size: var(--size-peta);
+}
+
+@media only screen and (min-width: 60em) {
+  .banner-text-wrap {
+    position: absolute;
+    padding: 0;
+    left: 0;
+    bottom: var(--space-2);
+    margin: 0;
+  }
+
+  .banner-text {
+    padding: var(--space) var(--space) var(--space) calc(var(--space-2) * 2);
+    border-left: 0;
+  }
+
+  .banner-title {
+    font-size: var(--size-yotta);
+  }
 }
