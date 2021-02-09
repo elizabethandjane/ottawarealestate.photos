@@ -2,3 +2,19 @@
   border-bottom: 0.1rem solid var(--color-primary);
   border-top: 0.1rem solid var(--color-primary);
 }
+
+.embed-map {
+  padding-top: 80%;
+}
+
+@media only screen and (min-width: 38em) {
+  .embed-map {
+    padding-top: 50%;
+  }
+}
+
+@media only screen and (min-width: 60em) {
+  .embed-map {
+    padding-top: 25%;
+  }
+}
