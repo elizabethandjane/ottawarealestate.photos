@@ -1,3 +1,8 @@
+.property-details {
+  font-size: var(--size-mega);
+  padding: var(--size) 0;
+}
+
 .property-details > ul {
   display: flex;
   justify-content: center;
@@ -7,9 +12,21 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: var(--space-1-2);
 }
 
 .icon-property {
   height: calc(var(--space) * 2.5);
   width: calc(var(--space) * 2.5);
+}
+
+@media only screen and (min-width: 38em) {
+  .property-details {
+    font-size: var(--size-giga);
+    padding: var(--size-2) 0;
+  }
+
+  .property-details li {
+    padding: var(--space);
+  }
 }

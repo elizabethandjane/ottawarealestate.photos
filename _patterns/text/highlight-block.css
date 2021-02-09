@@ -1,5 +1,5 @@
-.highlight-block > p {
-  /* position: relative; */
+.highlight-block {
+  padding: var(--space) var(--space-1-2);
 }
 
 .highlight-block > p::before,
@@ -17,6 +17,12 @@
   margin-bottom: 0;
   margin-top: var(--space-3-4);
   background: url("/images/dec-2.svg") center top / contain no-repeat;
+}
+
+@media only screen and (min-width: 38em) {
+  .highlight-block {
+    padding: var(--space-2) var(--space-1-2);
+  }
 }
 
 /*

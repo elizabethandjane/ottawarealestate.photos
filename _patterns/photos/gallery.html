@@ -4,7 +4,7 @@
       <span class="milli italic font-secondary color-primary line-after dec-before">Photos of</span>
       <br><span class="giga upper color-neutral-white">{{page.title}}</span>
     </h1>
-    <a class="btn btn-fancy" href="#"><span>View Photo Gallery</span></a>
+    <a class="btn btn-fancy" href="#" hidden aria-hidden="true" data-control="gallery-btn"><span>View Photo Gallery</span></a>
   </header>
   <div class="gallery">
     {% auto_gallery site.cdn page.category page.slug "front" page.front_images %}
