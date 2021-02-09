@@ -23,7 +23,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  top: calc(var(--space-1-4) + 0.1rem);
+  top: calc(var(--space-1-4) + 0.05rem);
   background-color: rgba(var(--rgb-neutral-dark), 0.8);
   position: absolute;
   z-index: 1;
@@ -31,20 +31,73 @@
 
 .realtor-top {
   display: grid;
-  grid-template-areas: "logo broker space portrait details contact";
-  grid-template-columns: 4.4rem 4.4rem 2rem 3rem auto auto;
-  align-items: center;
+  grid-template-areas:
+    "logo    broker  portrait ."
+    "info    info    info     info";
+  grid-template-columns: 3rem 3rem 3rem auto;
+  grid-template-rows: 3rem auto;
+  align-items: flex-start;
   gap: var(--space-1-4);
+}
+
+@media only screen and (min-width: 38em) {
+  .realtor-top {
+    grid-template-areas:
+      "logo broker space portrait info"
+      ".    .      .     .        info";
+    grid-template-columns: 4.4rem 4.4rem 2rem 4.4rem auto;
+    grid-template-rows: 4.4rem auto;
+  }
+}
+
+@media only screen and (min-width: 60em) {
+  .realtor-top {
+    grid-template-areas:
+      "logo broker space portrait info"
+      ".    .      .     .        info";
+    grid-template-columns: 4.4rem 4.4rem 2rem 4.4rem auto auto;
+    grid-template-rows: 4.4rem auto;
+  }
+
+  .realtor-top .realtor-info {
+    display: grid;
+    grid-template-areas: "details contact";
+    grid-template-columns: auto auto;
+    align-items: center;
+  }
 }
 
 .realtor-bottom {
   display: grid;
   grid-template-areas:
-    "logo   space portrait details call"
-    "broker space portrait details email";
-  grid-template-columns: 4.4rem 2rem 7rem auto 12rem;
-  grid-template-rows: 4.4rem 4.4rem;
+    "logo    broker  portrait ."
+    "info    info    info     info"
+    "buttons buttons buttons  buttons";
+  grid-template-columns: 3rem 3rem 3rem auto;
+  grid-template-rows: 3rem auto auto;
+  align-items: flex-start;
   gap: var(--space-1-4);
+}
+
+@media only screen and (min-width: 38em) {
+  .realtor-bottom {
+    grid-template-areas:
+      "logo broker space portrait info"
+      ".    .      .     .        info"
+      ".    .      .     .        buttons";
+    grid-template-columns: 4.4rem 4.4rem 2rem 4.4rem auto;
+    grid-template-rows: 4.4rem auto auto;
+  }
+}
+
+@media only screen and (min-width: 60em) {
+  .realtor-bottom {
+    grid-template-areas:
+      "logo broker space portrait info buttons"
+      ".    .      .     .        info buttons";
+    grid-template-columns: 4.4rem 4.4rem 2rem 4.4rem auto auto;
+    grid-template-rows: 4.4rem auto;
+  }
 }
 
 .realtor img {
@@ -68,6 +121,10 @@
   grid-area: broker;
 }
 
+.realtor-info {
+  grid-area: info;
+}
+
 .realtor-details {
   grid-area: details;
   display: flex;
@@ -77,6 +134,48 @@
 
 .realtor-contact {
   grid-area: contact;
+}
+
+.realtor-buttons {
+  grid-area: buttons;
+  display: grid;
+  grid-template-areas: "call" "email";
+  grid-template-columns: auto;
+  grid-template-rows: auto auto;
+  gap: var(--space-1-4);
+}
+
+@media only screen and (min-width: 25em) {
+  .realtor-buttons {
+    grid-template-areas: "call email";
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+  }
+}
+
+@media only screen and (min-width: 38em) {
+  .realtor-buttons {
+    grid-template-areas: "call" "email";
+    grid-template-columns: auto;
+    grid-template-rows: auto auto;
+  }
+}
+
+@media only screen and (min-width: 50em) {
+  .realtor-buttons {
+    grid-template-areas: "call email";
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+  }
+}
+
+@media only screen and (min-width: 60em) {
+  .realtor-buttons {
+    grid-template-areas: "call" "email";
+    grid-template-columns: auto;
+    grid-template-rows: auto auto;
+    height: 100%;
+  }
 }
 
 .realtor-call {

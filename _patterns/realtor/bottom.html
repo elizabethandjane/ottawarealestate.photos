@@ -6,26 +6,32 @@
       <img class="img-flex portrait" src="{{site.cdn}}/realtors/{{page.category}}/portrait.jpg" alt="{{realtor.full_name}} of {{realtor.business}}" loading="lazy" decoding="async">
       <img class="img-flex logo" src="{{site.cdn}}/realtors/{{page.category}}/business.png" alt="{{realtor.business}}" loading="lazy" decoding="async">
       <img class="img-flex broker" src="{{site.cdn}}/realtors/{{page.category}}/broker.png" alt="{{realtor.broker}}" loading="lazy" decoding="async">
-      <div class="realtor-details">
-        <h2 class="giga push-0 font-secondary">{{realtor.full_name}}</h2>
-        <em class="micro font-secondary">{{realtor.bio}}</em>
-        <em class="micro font-secondary push-1-8">{{realtor.location}}</em>
-        <dl class="list-group micro push-0 realtor-contact-group">
-          <dt class="nano italic">Phone</dt>
-          <dd class="push-0"><a href="tel:{{realtor.tel|replace:' ',''}}">{{realtor.tel}}</a></dd>
-          <dt class="nano italic">Mobile</dt>
-          <dd class="push-0"><a href="tel:{{realtor.mobile|replace:' ',''}}">{{realtor.mobile}}</a></dd>
-          <dt class="nano italic">Email</dt>
-          <dd class="push-0"><a href="mailto:{{realtor.mobile|replace:' ',''}}">{{realtor.email}}</a></dd>
-          <dt class="nano italic">Web</dt>
-          <dd class="push-0"><a href="{{realtor.web}}">{{realtor.web}}</a></dd>
-        </dl>
+      <div class="realtor-info">
+        <div class="realtor-details">
+          <h2 class="giga push-0 font-secondary">{{realtor.full_name}}</h2>
+          <em class="micro font-secondary">{{realtor.bio}}</em>
+          <em class="micro font-secondary push-1-8">{{realtor.location}}</em>
+        </div>
+        <div class="realtor-contact">
+          <dl class="list-group micro push-0 realtor-contact-group">
+            <dt class="nano italic">Mobile</dt>
+            <dd class="push-0"><a href="tel:{{realtor.mobile|replace:' ',''}}">{{realtor.mobile}}</a></dd>
+            <dt class="nano italic">Phone</dt>
+            <dd class="push-0"><a href="tel:{{realtor.tel|replace:' ',''}}">{{realtor.tel}}</a></dd>
+            <dt class="nano italic">Email</dt>
+            <dd class="push-0"><a href="mailto:{{realtor.mobile|replace:' ',''}}">{{realtor.email}}</a></dd>
+            <dt class="nano italic">Web</dt>
+            <dd class="push-0"><a href="{{realtor.web}}">{{realtor.web}}</a></dd>
+          </dl>
+        </div>
       </div>
-      <div class="realtor-call">
-        <a class="btn" href="tel:{{realtor.mobile|replace:' ',''}}"><span>Call {{realtor.short_name}}</span></a>
-      </div>
-      <div class="realtor-email">
-        <a class="btn" href="mailto:{{realtor.mobile|replace:' ',''}}"><span>Email For Details</span></a>
+      <div class="realtor-buttons">
+        <div class="realtor-call">
+          <a class="btn" href="tel:{{realtor.mobile|replace:' ',''}}"><span>Call {{realtor.short_name}}</span></a>
+        </div>
+        <div class="realtor-email">
+          <a class="btn" href="mailto:{{realtor.mobile|replace:' ',''}}"><span>Email For Details</span></a>
+        </div>
       </div>
     </div>
   </div>

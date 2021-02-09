@@ -3,34 +3,24 @@
 <aside id="realtor" class="realtor realtor-top-wrap color-neutral-dark gutter pad-t-1-2 pad-b-1-2 bg-neutral-light bg-circles" role="complementary">
   <div class="wrapper-small relative">
     <div class="realtor-top">
-      <div class="portrait">
-        <div class="embed embed-2by3">
-          <img class="embed-item" src="{{site.cdn}}/realtors/{{page.category}}/portrait.jpg" alt="{{realtor.full_name}} of {{realtor.business}}" loading="lazy" decoding="async">
+      <img class="portrait" src="{{site.cdn}}/realtors/{{page.category}}/portrait.jpg" alt="{{realtor.full_name}} of {{realtor.business}}" loading="lazy" decoding="async">
+      <img class="logo" src="{{site.cdn}}/realtors/{{page.category}}/business.png" alt="{{realtor.business}}" loading="lazy" decoding="async">
+      <img class="broker" src="{{site.cdn}}/realtors/{{page.category}}/broker.png" alt="{{realtor.broker}}" loading="lazy" decoding="async">
+      <div class="realtor-info">
+        <div class="realtor-details">
+          <h2 class="giga push-0 font-secondary">{{realtor.full_name}}</h2>
+          <em class="micro font-secondary">{{realtor.bio}}</em>
+          <em class="micro font-secondary push-1-8">{{realtor.location}}</em>
         </div>
-      </div>
-      <div class="logo">
-        <div class="embed embed-1by1">
-          <img class="embed-item" src="{{site.cdn}}/realtors/{{page.category}}/business.png" alt="{{realtor.business}}" loading="lazy" decoding="async">
+        <div class="realtor-contact">
+          <dl class="list-group micro push-0 realtor-contact-group">
+            <dt class="nano italic">Mobile</dt>
+            <dd class="push-0"><a href="tel:{{realtor.mobile|replace:' ',''}}">{{realtor.mobile}}</a></dd>
+            <dt class="nano italic">Email</dt>
+            <dd class="push-0"><a href="mailto:{{realtor.mobile|replace:' ',''}}">{{realtor.email}}</a></dd>
+          </dl>
         </div>
-      </div>
-      <div class="broker">
-        <div class="embed embed-1by1">
-          <img class="embed-item" src="{{site.cdn}}/realtors/{{page.category}}/broker.png" alt="{{realtor.broker}}" loading="lazy" decoding="async">
-        </div>
-      </div>
-      <div class="realtor-details">
-        <h2 class="giga push-0 font-secondary">{{realtor.full_name}}</h2>
-        <em class="micro font-secondary">{{realtor.bio}}</em>
-        <em class="micro font-secondary push-1-8">{{realtor.location}}</em>
-      </div>
-      <div class="realtor-contact">
-        <dl class="list-group micro push-0 realtor-contact-group">
-          <dt class="nano italic">Mobile</dt>
-          <dd class="push-0"><a href="tel:{{realtor.mobile|replace:' ',''}}">{{realtor.mobile}}</a></dd>
-          <dt class="nano italic">Email</dt>
-          <dd class="push-0"><a href="mailto:{{realtor.mobile|replace:' ',''}}">{{realtor.email}}</a></dd>
-        </dl>
-      </div>
+      <div>
     </div>
     <div class="btn-realtor-wrap milli">
       <a class="btn btn-realtor" href="#realtor">
