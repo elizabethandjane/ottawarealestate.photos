@@ -1,4 +1,5 @@
 .banner {
+  --banner-border: 0.1rem solid var(--color-primary);
   position: relative;
   border-top: 0.1rem solid var(--color-primary);
 }
@@ -12,7 +13,7 @@
 }
 
 .banner-text {
-  border: 0.1rem solid var(--color-primary);
+  border: var(--banner-border);
   background-color: rgba(var(--rgb-neutral-dark), 0.97);
   outline: var(--space-1-4) solid rgba(var(--rgb-neutral-dark), 0.8);
   padding: var(--space-1-2);
@@ -29,11 +30,24 @@
     left: 0;
     bottom: var(--space-2);
     margin: 0;
+    max-width: 50em;
+  }
+
+  .banner-location-top-right {
+    left: auto;
+    top: calc(var(--space-2) + var(--space));
+    right: 0;
   }
 
   .banner-text {
     padding: var(--space) var(--space) var(--space) calc(var(--space-2) * 2);
     border-left: 0;
+  }
+
+  .banner-location-top-right .banner-text {
+    padding: var(--space) calc(var(--space-2) * 2) var(--space) var(--space);
+    border: var(--banner-border);
+    border-right: 0;
   }
 
   .banner-title {

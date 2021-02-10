@@ -2,11 +2,11 @@
   <div class="embed embed-16by9 fade-lines" role="banner">
     <img class="embed-item" src="{{site.cdn}}/properties/{{page.category}}/{{page.slug}}/banner.jpg" loading="eager" decoding="async" alt="">
   </div>
-  <div class="banner-text-wrap">
+  <div class="banner-text-wrap {% if page.banner_location %}banner-location-{{page.banner_location}}{% endif %}">
     <div class="banner-text">
       <h1 class="kilo push-0">
         <span class="italic font-secondary color-primary line-after">Welcome to</span>
-        <br><span class="banner-title upper color-neutral-white">{{page.title}}</span>
+        <span class="banner-title upper block pad-t-1-4 color-neutral-white">{{page.title}}</span>
       </h1>
     </div>
   </div>
