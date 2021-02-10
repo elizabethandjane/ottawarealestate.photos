@@ -3,6 +3,7 @@ category: irving-real-estate
 title: "6 Settlers Ridge Way"
 intro: "Quirky craftsman-style home on a generous—and quiet—piece of land with a single-room turret."
 adr: "6 Settlers Ridge Way, Ottawa, ON, K2J 4V1, Canada"
+location: "Barrhaven, ON"
 bedrooms: 2
 bathrooms: 3
 property_type: "Single Family"
