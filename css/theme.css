@@ -100,3 +100,10 @@ h1 {
   margin-left: auto;
   margin-right: auto;
 }
+
+main :focus,
+main a:focus,
+main .btn:focus,
+main button:focus {
+  outline-color: #fff;
+}
