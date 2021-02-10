@@ -1,10 +1,17 @@
-{% if page.3d %}
-  <section class="floorplan-wrap">
-    <h2 class="visually-hidden push-0">Examine the floor-plan</h2>
-    <div class="floorplan">
+<section class="floorplan-wrap">
+  <h2 class="visually-hidden push-0">Examine the floor-plan</h2>
+  <div class="floorplan">
+    {% if page.3d %}
       <div class="embed embed-golden">
         <img class="embed-item" src="{{site.cdn}}/properties/{{page.category}}/{{page.slug}}/floor-plan.png" loading="lazy" decoding="async" alt="">
       </div>
-    </div>
-  </section>
-{% endif %}
+    {% else %}
+      <div class="embed embed-3by1">
+        <div class="pin-c text-center">
+          <p class="exa font-accent color-neutral-white push-0">Floor Plan</p>
+          <strong class="giga font-secondary italic color-primary-light">Being drawn up soon!</strong>
+        </div>
+      </div>
+    {% endif %}
+  </div>
+</section>
