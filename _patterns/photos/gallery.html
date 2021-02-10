@@ -4,11 +4,25 @@
       <span class="milli italic font-secondary color-primary line-after dec-before">Photos of</span>
       <br><span class="giga upper color-neutral-white">{{page.title}}</span>
     </h1>
-    <a class="btn btn-fancy" href="#" hidden aria-hidden="true" data-control="gallery-btn"><span>View Photo Gallery</span></a>
+    <button class="btn btn-fancy gallery-btn" hidden aria-hidden="true" data-control="gallery-btn"><span>View Photo Gallery</span></button>
   </header>
-  <div class="gallery">
+  <div class="gallery" data-control="gallery">
     {% auto_gallery site.cdn page.category page.slug "front" page.front_images %}
     {% auto_gallery site.cdn page.category page.slug "interior" page.interior_images %}
     {% auto_gallery site.cdn page.category page.slug "back" page.back_images %}
   </div>
 </section>
+
+<div class="gallery-carousel" data-control="gallery-carousel" hidden aria-hidden="true" aria-label="Use arrow keys to change photos & escape to close.">
+  <div class="gallery-carousel-wrap gutter-2 pad-t-1-4 pad-b">
+    <img class="gallery-carousel-img" src="http://localhost:4000/photos/properties/irving-real-estate/52-redwood-ave/front-01.jpg" alt="" data-control="gallery-carousel-img">
+  </div>
+  <button class="gallery-carousel-btn gallery-carousel-btn-prev icon i-48" data-control="gallery-btn-prev"><svg><use xlink:href="/images/icons.svg#arrow-left"/></svg></button>
+  <button class="gallery-carousel-btn gallery-carousel-btn-next icon i-48" data-control="gallery-btn-next"><svg><use xlink:href="/images/icons.svg#arrow-right"/></svg></button>
+  <button class="gallery-carousel-btn gallery-carousel-btn-close icon i-32" data-control="gallery-btn-close"><svg><use xlink:href="/images/icons.svg#close"/></svg></button>
+  <p class="gallery-carousel-status micro">
+    <span class="color-neutral-light" data-control="gallery-carousel-current">1</span>
+    <span class="italic font-secondary color-primary">of</span>
+    <span class="color-neutral-light" data-control="gallery-carousel-total">35</span>
+  </p>
+</div>
