@@ -39,7 +39,9 @@
 }
 
 .gallery-row:nth-child(2) > div:nth-child(2)::before,
-.gallery-row:nth-child(7) > div:nth-child(2)::before {
+.gallery-row:nth-child(7) > div:nth-child(2)::before,
+.gallery-row:nth-child(4) > div:last-child::before,
+.gallery-row:nth-child(11) > div:nth-last-child(2)::before {
   content: "";
   position: absolute;
   left: var(--space-1-4);
@@ -47,19 +49,6 @@
   top: var(--space-1-4);
   bottom: var(--space-1-4);
   border: 0.1rem solid var(--color-primary);
-  z-index: 1;
-  pointer-events: none;
-}
-
-.gallery-row:nth-child(4) > div:last-child::before,
-.gallery-row:nth-child(11) > div:nth-last-child(2)::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  border: var(--space-1-4) solid rgba(var(--rgb-neutral-dark), 0.8);
   z-index: 1;
   pointer-events: none;
 }
@@ -170,6 +159,7 @@
   :root {
     --gallery-carousel-can-open: 1;
   }
+
   .gallery-btn,
   .gallery-carousel {
     display: block;
