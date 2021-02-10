@@ -15,22 +15,16 @@ layout: default
 </main>
 {% pattern realtor/bottom %}
 
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAXlJTc03d2jU9zvCWi0milcz9RNQa8AA4&map_ids=7f238eb041e7e77c"></script>
 <script>
-  const geocoder = new google.maps.Geocoder();
-  geocoder.geocode({
-      "address": "{{page.adr}}",
-  }, function(results, status) {
-      if (status == google.maps.GeocoderStatus.OK) {
-          const map = new google.maps.Map(document.getElementById("map"), {
-              zoom: 17,
-              center: results[0].geometry.location,
-              mapId: "7f238eb041e7e77c",
-          });
-          const marker = new google.maps.Marker({
-              map: map,
-              position: results[0].geometry.location
-          });
-      }
-  });
+  "use strict";
+  setTimeout(() => {
+    const realtor = document.getElementById("realtor");
+    window.scrollTo(0, realtor.getBoundingClientRect().height);
+  }, 200);
 </script>
+
+<script>
+  const PROPERTY_ADDRESS = "{{page.adr}}";
+</script>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAXlJTc03d2jU9zvCWi0milcz9RNQa8AA4&map_ids=7f238eb041e7e77c"></script>
