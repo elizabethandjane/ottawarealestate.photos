@@ -1,0 +1,8 @@
+{%- if page.layout == "property" -%}
+  Real estate listing photos, 3D tours &amp; floor plans for {{page.title}}, {{page.location}}
+{%- elsif page.layout == "realtor" -%}
+  {%- assign realtor=site.data.realtors[page.title] -%}
+  Real estate listing photos, 3D tours &amp; floor plans for current property listings by {{realtor.business}}, {{realtor.location}}
+{%- else -%}
+  Beautiful, bright real estate photos; 3D tours & property dollhouses; measured floorplans for real estate agents in Ottawa, ON
+{%- endif -%}

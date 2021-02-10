@@ -1,0 +1,8 @@
+{%- if page.layout == "property" -%}
+  {{page.title}} · For Sale · {{page.location}}
+{%- elsif page.layout == "realtor" -%}
+  {%- assign realtor=site.data.realtors[page.title] -%}
+  Properties for sale by {{realtor.business}} · {{realtor.location}}
+{%- else -%}
+  E&amp;J Real Estate Photography · Photos, 3D Tours, Floorplans · Ottawa, ON
+{%- endif -%}
