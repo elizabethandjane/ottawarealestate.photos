@@ -7,6 +7,9 @@
   }
 
   const geocoder = new google.maps.Geocoder();
+  const infowindow = new google.maps.InfoWindow({
+    content: PROPERTY_ADDRESS,
+  });
 
   geocoder.geocode(
     {
@@ -19,9 +22,13 @@
           center: results[0].geometry.location,
           mapId: "7f238eb041e7e77c",
         });
-        new google.maps.Marker({
+        const marker = new google.maps.Marker({
           map: map,
           position: results[0].geometry.location,
+        });
+        infowindow.open(map, marker);
+        marker.addListener("click", () => {
+          infowindow.open(map, marker);
         });
       }
     },

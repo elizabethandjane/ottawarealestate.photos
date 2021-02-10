@@ -1,6 +1,7 @@
 .map {
   border-bottom: 0.1rem solid var(--color-primary);
   border-top: 0.1rem solid var(--color-primary);
+  color: #000;
 }
 
 .embed-map {
