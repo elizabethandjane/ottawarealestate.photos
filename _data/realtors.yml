@@ -9,3 +9,13 @@ irving-real-estate:
   mobile: "+1 613 296 5555"
   email: "jeremy@irvingrealestate.ca"
   web: "https://www.irvingrealestate.ca/"
+
+details-realty:
+  full_name: "Marilyn VanAdel"
+  short_name: "Marilyn"
+  bio: "Sales Representative · Details Realty Inc."
+  broker: "Details Realty Inc."
+  location: "Stittsville, ON"
+  mobile: "+1 613 884 4159"
+  tel: "+1 613 686 6336, 6218"
+  web: "https://detailsrealty.ca/"
