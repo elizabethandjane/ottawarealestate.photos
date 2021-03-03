@@ -4,8 +4,12 @@
   <div class="island bg-neutral-light bg-circles">
     <div class="realtor-bottom wrapper-small">
       <img class="img-flex portrait" src="{{site.cdn}}/realtors/{{page.category}}/portrait.jpg" alt="{{realtor.full_name}} of {{realtor.business}}" loading="lazy" decoding="async">
-      <img class="img-flex logo" src="{{site.cdn}}/realtors/{{page.category}}/business.png" alt="{{realtor.business}}" loading="lazy" decoding="async">
-      <img class="img-flex broker" src="{{site.cdn}}/realtors/{{page.category}}/broker.png" alt="{{realtor.broker}}" loading="lazy" decoding="async">
+      {% if realtor.business %}
+        <img class="img-flex logo" src="{{site.cdn}}/realtors/{{page.category}}/business.png" alt="{{realtor.business}}" loading="lazy" decoding="async">
+      {% endif %}
+      {% if realtor.broker %}
+        <img class="img-flex broker" src="{{site.cdn}}/realtors/{{page.category}}/broker.png" alt="{{realtor.broker}}" loading="lazy" decoding="async">
+      {% endif %}
       <div class="realtor-info">
         <div class="realtor-details">
           <h2 class="giga push-0 font-secondary">{{realtor.full_name}}</h2>
@@ -14,23 +18,35 @@
         </div>
         <div class="realtor-contact">
           <dl class="list-group micro push-0 realtor-contact-group">
-            <dt class="nano italic">Mobile</dt>
-            <dd class="push-0"><a href="tel:{{realtor.mobile|replace:' ',''}}">{{realtor.mobile}}</a></dd>
+            {% if realtor.mobile %}
+              <dt class="nano italic">Mobile</dt>
+              <dd class="push-0"><a href="tel:{{realtor.mobile|replace:' ',''}}">{{realtor.mobile}}</a></dd>
+            {% endif %}
             <dt class="nano italic">Phone</dt>
             <dd class="push-0"><a href="tel:{{realtor.tel|replace:' ',''}}">{{realtor.tel}}</a></dd>
-            <dt class="nano italic">Email</dt>
-            <dd class="push-0"><a href="mailto:{{realtor.email|replace:' ',''}}">{{realtor.email}}</a></dd>
-            <dt class="nano italic">Web</dt>
-            <dd class="push-0"><a href="{{realtor.web}}">{{realtor.web}}</a></dd>
+            {% if realtor.email %}
+              <dt class="nano italic">Email</dt>
+              <dd class="push-0"><a href="mailto:{{realtor.email|replace:' ',''}}">{{realtor.email}}</a></dd>
+            {% endif %}
+            {% if realtor.web %}
+              <dt class="nano italic">Web</dt>
+              <dd class="push-0"><a href="{{realtor.web}}">{{realtor.web}}</a></dd>
+            {% endif %}
           </dl>
         </div>
       </div>
       <div class="realtor-buttons">
         <div class="realtor-call">
-          <a class="btn" href="tel:{{realtor.mobile|replace:' ',''}}"><span>Call {{realtor.short_name}}</span></a>
+          {% if realtor.mobile %}
+            <a class="btn" href="tel:{{realtor.mobile|replace:' ',''}}"><span>Call {{realtor.short_name}}</span></a>
+          {% else %}
+            <a class="btn" href="tel:{{realtor.tel|replace:' ',''}}"><span>Call {{realtor.short_name}}</span></a>
+          {% endif %}
         </div>
         <div class="realtor-email">
-          <a class="btn" href="mailto:{{realtor.email|replace:' ',''}}"><span>Email For Details</span></a>
+          {% if realtor.email %}
+            <a class="btn" href="mailto:{{realtor.email|replace:' ',''}}"><span>Email For Details</span></a>
+          {% endif %}
         </div>
       </div>
     </div>

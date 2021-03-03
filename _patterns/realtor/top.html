@@ -4,8 +4,12 @@
   <div class="wrapper-small relative">
     <div class="realtor-top">
       <img class="portrait" src="{{site.cdn}}/realtors/{{page.category}}/portrait.jpg" alt="{{realtor.full_name}} of {{realtor.business}}" loading="lazy" decoding="async">
-      <img class="logo" src="{{site.cdn}}/realtors/{{page.category}}/business.png" alt="{{realtor.business}}" loading="lazy" decoding="async">
-      <img class="broker" src="{{site.cdn}}/realtors/{{page.category}}/broker.png" alt="{{realtor.broker}}" loading="lazy" decoding="async">
+      {% if realtor.business %}
+        <img class="logo" src="{{site.cdn}}/realtors/{{page.category}}/business.png" alt="{{realtor.business}}" loading="lazy" decoding="async">
+      {% endif %}
+      {% if realtor.broker %}
+        <img class="broker" src="{{site.cdn}}/realtors/{{page.category}}/broker.png" alt="{{realtor.broker}}" loading="lazy" decoding="async">
+      {% endif %}
       <div class="realtor-info">
         <div class="realtor-details">
           <h2 class="giga push-0 font-secondary">{{realtor.full_name}}</h2>
@@ -14,10 +18,17 @@
         </div>
         <div class="realtor-contact">
           <dl class="list-group micro push-0 realtor-contact-group">
-            <dt class="nano italic">Mobile</dt>
-            <dd class="push-0"><a href="tel:{{realtor.mobile|replace:' ',''}}">{{realtor.mobile}}</a></dd>
-            <dt class="nano italic">Email</dt>
-            <dd class="push-0"><a href="mailto:{{realtor.email|replace:' ',''}}">{{realtor.email}}</a></dd>
+            {% if realtor.mobile %}
+              <dt class="nano italic">Mobile</dt>
+              <dd class="push-0"><a href="tel:{{realtor.mobile|replace:' ',''}}">{{realtor.mobile}}</a></dd>
+            {% else %}
+              <dt class="nano italic">Tel</dt>
+              <dd class="push-0"><a href="tel:{{realtor.tel|replace:' ',''}}">{{realtor.tel}}</a></dd>
+            {% endif %}
+            {% if realtor.email %}
+              <dt class="nano italic">Email</dt>
+              <dd class="push-0"><a href="mailto:{{realtor.email|replace:' ',''}}">{{realtor.email}}</a></dd>
+            {% endif %}
           </dl>
         </div>
       <div>
