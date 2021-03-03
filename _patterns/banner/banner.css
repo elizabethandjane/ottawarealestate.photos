@@ -39,12 +39,18 @@
     right: 0;
   }
 
+  .banner-location-bottom-right {
+    left: auto;
+    right: 0;
+  }
+
   .banner-text {
     padding: var(--space) var(--space) var(--space) calc(var(--space-2) * 2);
     border-left: 0;
   }
 
-  .banner-location-top-right .banner-text {
+  .banner-location-top-right .banner-text,
+  .banner-location-bottom-right .banner-text {
     padding: var(--space) calc(var(--space-2) * 2) var(--space) var(--space);
     border: var(--banner-border);
     border-right: 0;
