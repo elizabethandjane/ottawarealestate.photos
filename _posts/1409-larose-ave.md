@@ -1,0 +1,16 @@
+---
+category: irving-real-estate
+title: "1409 Larose Avenue"
+intro: "Fantastic lot in a central location ready for investors, developers or someone to make it their own."
+adr: "1409 Larose Avenue, Ottawa, ON, K1Z 7X6, Canada"
+location: "Ottawa, ON"
+bedrooms: 3
+bathrooms: 1
+property_type: "Single Family"
+front_images: 3
+interior_images: 16
+back_images: 7
+# 3d: "https://www.asteroommls.com/pviewer?hideleadgen=1&autorotation=1&defaultviewdollhouse=0&showdollhousehotspot=1&stopbgaudio=1&autonav=0&token=Y_LYCID0nkqBfq3uFbo5Xg"
+expires: "2021-09-18"
+banner_location: "bottom-left"
+---
