@@ -1,5 +1,5 @@
 ---
-category: details-realty
+category: barb-taylor
 title: "117 Harbour Landing Private"
 intro: "Stunning executive two bedroom semi-detached designed by Architect Barry Hobin: in the sought after community of Crystal Beach."
 adr: "117 Harbour Landing Private, Nepean, ON, K2H 1H3, Canada"

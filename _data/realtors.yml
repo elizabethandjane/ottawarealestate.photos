@@ -10,15 +10,14 @@ irving-real-estate:
   email: "jeremy@irvingrealestate.ca"
   web: "https://www.irvingrealestate.ca/"
 
-details-realty:
-  full_name: "Marilyn VanAdel"
-  short_name: "Marilyn"
+barb-taylor:
+  full_name: "Barb Taylor"
+  short_name: "Barb"
   bio: "Sales Representative · Details Realty Inc."
-  broker: "Details Realty Inc."
   location: "Stittsville, ON"
-  mobile: "+1 613 884 4159"
-  tel: "+1 613 686 6336, 6218"
-  web: "https://detailsrealty.ca/"
+  mobile: "+1 613 889 5442"
+  email: "bjtaylor@bell.net"
+  web: "http://www.taylormadeservice.com"
 
 alyssa-massia:
   full_name: "Alyssa Massia"
