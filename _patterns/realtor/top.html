@@ -21,7 +21,8 @@
             {% if realtor.mobile %}
               <dt class="nano italic">Mobile</dt>
               <dd class="push-0"><a href="tel:{{realtor.mobile|replace:' ',''}}">{{realtor.mobile}}</a></dd>
-            {% else %}
+            {% endif %}
+            {% if realtor.tel %}
               <dt class="nano italic">Tel</dt>
               <dd class="push-0"><a href="tel:{{realtor.tel|replace:' ',''}}">{{realtor.tel}}</a></dd>
             {% endif %}

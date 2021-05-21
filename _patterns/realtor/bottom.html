@@ -22,8 +22,10 @@
               <dt class="nano italic">Mobile</dt>
               <dd class="push-0"><a href="tel:{{realtor.mobile|replace:' ',''}}">{{realtor.mobile}}</a></dd>
             {% endif %}
-            <dt class="nano italic">Phone</dt>
-            <dd class="push-0"><a href="tel:{{realtor.tel|replace:' ',''}}">{{realtor.tel}}</a></dd>
+            {% if realtor.tel %}
+              <dt class="nano italic">Phone</dt>
+              <dd class="push-0"><a href="tel:{{realtor.tel|replace:' ',''}}">{{realtor.tel}}</a></dd>
+            {% endif %}
             {% if realtor.email %}
               <dt class="nano italic">Email</dt>
               <dd class="push-0"><a href="mailto:{{realtor.email|replace:' ',''}}">{{realtor.email}}</a></dd>
