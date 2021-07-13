@@ -12,5 +12,5 @@ interior_images: 22
 back_images: 4
 3d: "https://www.asteroommls.com/pviewer?hideleadgen=1&autorotation=1&defaultviewdollhouse=0&showdollhousehotspot=1&stopbgaudio=1&autonav=0&token=WUXZCDYCW0mPvD3ahDHvKQ"
 expires: "2021-12-13"
-banner_location: "bottom-right"
+banner_location: "top-right"
 ---
