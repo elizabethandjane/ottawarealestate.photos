@@ -7,10 +7,10 @@ location: "Ottawa, ON"
 bedrooms: 1
 bathrooms: 1
 property_type: "Condo"
-front_images: 4
-interior_images: 21
-back_images: 8
+front_images: 6
+interior_images: 22
+back_images: 4
 3d: "https://www.asteroommls.com/pviewer?hideleadgen=1&autorotation=1&defaultviewdollhouse=0&showdollhousehotspot=1&stopbgaudio=1&autonav=0&token=WUXZCDYCW0mPvD3ahDHvKQ"
 expires: "2021-12-13"
-banner_location: "top-right"
+banner_location: "bottom-right"
 ---
