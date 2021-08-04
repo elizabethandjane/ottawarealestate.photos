@@ -1,7 +1,7 @@
 ---
 category: irving-real-estate
 title: "9 Stinson Ave."
-intro: "Situated in Bells Cornders, this fabulously functional property on a huge piece of land is one you need to see!"
+intro: "Situated in Bells Corners, this fabulously functional property on a huge piece of land is one you need to see!"
 adr: "9 Stinson Ave., Nepean, ON K2H 6M8, Canada"
 location: "Nepean, ON"
 bedrooms: 3
