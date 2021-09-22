@@ -33,6 +33,10 @@
     max-width: 50em;
   }
 
+  .banner-location-top-left {
+    top: calc(var(--space-2) + var(--space));
+  }
+
   .banner-location-top-right {
     left: auto;
     top: calc(var(--space-2) + var(--space));
