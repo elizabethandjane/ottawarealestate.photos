@@ -1,5 +1,5 @@
 {%- if page.layout == "property" -%}
-  {{site.cdn}}/properties/{{page.category}}/{{page.slug}}/banner.jpg
+  {{site.cdn}}/properties/{{page.category}}/{{page.date|date:'%Y'}}/{{page.slug}}/banner.jpg
 {%- elsif page.layout == "realtor" -%}
   {%- assign realtor=site.data.realtors[page.title] -%}
   {{site.cdn}}/realtors/{{page.title}}/business.jpg

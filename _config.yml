@@ -1,4 +1,4 @@
-permalink: /:categories/:slug/
+permalink: /:categories/:year/:slug/
 
 theme: jekyll_patternbot
 plugins:
