@@ -7,9 +7,10 @@ module Jekyll
       @params = raw_params.split(" ")
       @url = @params[0].strip
       @realtor = @params[1].strip
-      @prop = @params[2].strip
-      @group = @params[3].strip
-      @count = @params[4].strip
+      @year = @params[2].strip
+      @prop = @params[3].strip
+      @group = @params[4].strip
+      @count = @params[5].strip
     end
 
     def get_image_groups(context)
@@ -44,7 +45,7 @@ module Jekyll
         tags.push('<div class="gallery-row gallery-row-%d">' % group.length)
         for img in group
           tags.push('<div><div class="embed embed-3by2">')
-          tags.push('<img class="embed-item" src="%s/properties/%s/%s/%s.jpg" loading="lazy" decoding="async" alt="">' % [context[@url], context[@realtor], context[@prop], img])
+          tags.push('<img class="embed-item" src="%s/properties/%s/%s/%s/%s.jpg" loading="lazy" decoding="async" alt="">' % [context[@url], context[@realtor], context[@year], context[@prop], img])
           tags.push('</div></div>')
         end
         tags.push('</div>')

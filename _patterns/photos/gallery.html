@@ -7,9 +7,10 @@
     <button class="btn btn-fancy gallery-btn" hidden aria-hidden="true" data-control="gallery-btn" aria-controls="gallery-carousel"><span>View Photo Gallery</span></button>
   </header>
   <div class="gallery" data-control="gallery">
-    {% auto_gallery site.cdn page.category page.slug "front" page.front_images %}
-    {% auto_gallery site.cdn page.category page.slug "interior" page.interior_images %}
-    {% auto_gallery site.cdn page.category page.slug "back" page.back_images %}
+    {% capture year %}{{page.date|date:"%Y"}}{% endcapture %}
+    {% auto_gallery site.cdn page.category year page.slug "front" page.front_images %}
+    {% auto_gallery site.cdn page.category year page.slug "interior" page.interior_images %}
+    {% auto_gallery site.cdn page.category year page.slug "back" page.back_images %}
   </div>
 </section>
 
