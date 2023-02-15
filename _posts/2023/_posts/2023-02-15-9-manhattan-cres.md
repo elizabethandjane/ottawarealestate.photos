@@ -7,9 +7,9 @@ location: "Ottawa, ON"
 bedrooms: 2
 bathrooms: 2
 property_type: "Townhouse"
-front_images: 1
+front_images: 2 # Must have at least 2
 interior_images: 22
-back_images: 4
+back_images: 4 # Must have at least 2
 3d: "https://www.asteroommls.com/pviewer?hideleadgen=1&autorotation=1&defaultviewdollhouse=0&showdollhousehotspot=1&stopbgaudio=1&autonav=0&token=Q3bCEaTxUeKrX54wQRYMA"
 expires: "2022-07-15" # + 5 months
 banner_location: "bottom-right"
