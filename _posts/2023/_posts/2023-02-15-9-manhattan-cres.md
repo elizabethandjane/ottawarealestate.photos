@@ -1,11 +1,11 @@
 ---
 category: irving-real-estate
 title: "9 Manhattan Cres."
-intro: "This stunning townhome boasts a fantastic central location and convenient proximity to amenities. With 2 bedrooms and 2 bathrooms, each bedroom features its own private ensuite, providing an added level of luxury and comfort. Additionally, this home has been recently updated with a new roof, furnace, and air conditioner, ensuring that it is fully equipped for modern living."
+intro: "This stunning townhome boasts a fantastic central location and convenient proximity to amenities. With 2 bedrooms and 3 bathrooms, each bedroom features its own private ensuite, providing an added level of luxury and comfort. Additionally, this home has been recently updated with a new roof, furnace, and air conditioner, ensuring that it is fully equipped for modern living."
 adr: "9 Manhattan Cres., Ottawa, ON, K2C 4B4, Canada"
 location: "Ottawa, ON"
 bedrooms: 2
-bathrooms: 2
+bathrooms: 3
 property_type: "Townhouse"
 front_images: 2 # Must have at least 2
 interior_images: 22
